@@ -1,32 +1,26 @@
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
-import Hero from "@/components/Hero";
-import WorkSection from "@/components/WorkSection";
-import AboutSection from "@/components/AboutSection";
-import Footer from "@/components/Footer";
+import BioSection from "@/components/BioSection";
 
 const Index = () => {
   return (
     <>
       <Helmet>
-        <title>Your Name - Product Manager & Builder</title>
+        <title>Menem Ragab - Product Manager</title>
         <meta 
           name="description" 
-          content="Product manager helping teams build better products. View my work and get in touch." 
+          content="Product manager crafting digital products that bring joy and empower users. Based in Dubai." 
         />
-        <meta property="og:title" content="Your Name - Product Manager & Builder" />
-        <meta property="og:description" content="Product manager helping teams build better products." />
+        <meta property="og:title" content="Menem Ragab - Product Manager" />
+        <meta property="og:description" content="Product manager crafting digital products that bring joy and empower users." />
         <meta property="og:type" content="website" />
       </Helmet>
 
-      <div className="min-h-screen flex flex-col">
+      <div className="min-h-screen flex flex-col bg-background">
         <Header />
         <main className="flex-1">
-          <Hero />
-          <WorkSection />
-          <AboutSection />
+          <BioSection />
         </main>
-        <Footer />
       </div>
     </>
   );
