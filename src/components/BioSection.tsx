@@ -1,9 +1,7 @@
 import profileImage from "@/assets/profile.png";
 import { Linkedin, Twitter } from "lucide-react";
-
 const BioSection = () => {
-  return (
-    <section className="py-16 md:py-24">
+  return <section className="py-16 md:py-24">
       <div className="container max-w-4xl mx-auto px-6 text-center">
         {/* Main Heading */}
         <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-normal mb-8">
@@ -18,7 +16,7 @@ const BioSection = () => {
           </a>
           ,{" "}
           <a href="#" className="underline underline-offset-4 hover:opacity-70 transition-opacity">
-            write about PM
+            write about Product Management 
           </a>
           , and generally just try to be helpful.
         </p>
@@ -27,11 +25,7 @@ const BioSection = () => {
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mb-16">
           {/* Profile Image */}
           <div className="flex-shrink-0">
-            <img 
-              src={profileImage}
-              alt="Menem Ragab"
-              className="w-48 h-48 md:w-56 md:h-56 object-cover object-top rounded-sm"
-            />
+            <img alt="Menem Ragab" className="w-48 h-48 md:w-56 md:h-56 object-cover object-top rounded-sm" src="/lovable-uploads/4045a984-5152-437c-9b79-83c9d367bdf6.jpg" />
           </div>
 
           {/* Newsletter CTA */}
@@ -42,10 +36,7 @@ const BioSection = () => {
             <p className="text-muted-foreground mb-6 leading-relaxed">
               Product manager crafting digital products that bring joy and empower users. Based in Dubai.
             </p>
-            <a
-              href="mailto:hello@example.com"
-              className="inline-block bg-foreground text-background px-6 py-3 font-medium hover:opacity-90 transition-opacity"
-            >
+            <a href="mailto:hello@example.com" className="inline-block bg-foreground text-background px-6 py-3 font-medium hover:opacity-90 transition-opacity">
               Get in Touch
             </a>
           </div>
@@ -53,26 +44,14 @@ const BioSection = () => {
 
         {/* Footer Social Icons */}
         <div className="flex items-center justify-center gap-4 pt-8 border-t border-border">
-          <a 
-            href="https://linkedin.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-foreground hover:opacity-70 transition-opacity"
-          >
+          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:opacity-70 transition-opacity">
             <Linkedin size={20} />
           </a>
-          <a 
-            href="https://twitter.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-foreground hover:opacity-70 transition-opacity"
-          >
+          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:opacity-70 transition-opacity">
             <Twitter size={20} />
           </a>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default BioSection;
