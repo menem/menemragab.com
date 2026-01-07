@@ -33,9 +33,7 @@ const BioSection = () => {
             <h2 className="font-serif text-2xl md:text-3xl mb-4">
               Let's connect
             </h2>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
-              Product manager crafting digital products that bring joy and empower users. Based in Dubai.
-            </p>
+            <p className="text-muted-foreground mb-6 leading-relaxed">Dubai based Product manager crafting digital products that bring joy and empower users around the GCC and internationally. </p>
             <a href="mailto:hello@example.com" className="inline-block bg-foreground text-background px-6 py-3 font-medium hover:opacity-90 transition-opacity">
               Get in Touch
             </a>
