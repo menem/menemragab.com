@@ -9,7 +9,17 @@ const BioSection = () => {
         </h1>
 
         {/* One-liner Bio */}
-        
+        <p className="text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-20">
+          I'm a product manager who builds{" "}
+          <a href="#" className="underline underline-offset-4 hover:opacity-70 transition-opacity">
+            digital products
+          </a>
+          ,{" "}
+          <a href="#" className="underline underline-offset-4 hover:opacity-70 transition-opacity">
+            write about Product Management 
+          </a>
+          , and generally just try to be helpful.
+        </p>
 
         {/* Newsletter Section */}
         <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mb-16">
@@ -23,7 +33,9 @@ const BioSection = () => {
             <h2 className="font-serif text-2xl md:text-3xl mb-4">
               Let's connect
             </h2>
-            <p className="text-muted-foreground mb-6 leading-relaxed">Dubai based Product manager crafting digital products that bring joy and empower users around the GCC and internationally. </p>
+            <p className="text-muted-foreground mb-6 leading-relaxed">
+              Product manager crafting digital products that bring joy and empower users. Based in Dubai.
+            </p>
             <a href="mailto:hello@example.com" className="inline-block bg-foreground text-background px-6 py-3 font-medium hover:opacity-90 transition-opacity">
               Get in Touch
             </a>
