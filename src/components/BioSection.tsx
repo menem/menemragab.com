@@ -36,8 +36,8 @@ const BioSection = () => {
             <p className="text-muted-foreground mb-6 leading-relaxed">
               Product manager crafting digital products that bring joy and empower users. Based in Dubai.
             </p>
-            <a href="mailto:menem@menemragab.com" className="inline-block bg-foreground text-background px-6 py-3 font-medium hover:opacity-90 transition-opacity rounded-md">
-              ​
+            <a className="inline-block bg-foreground text-background px-6 py-3 font-medium hover:opacity-90 transition-opacity rounded-md" href="hire.menemragab.com">
+              ​Let's work together  
             </a>
           </div>
         </div>
