@@ -16,9 +16,9 @@ const BioSection = () => {
           </a>
           ,{" "}
           <a href="#" className="underline underline-offset-4 hover:opacity-70 transition-opacity">
-            write about Product Management 
+            write about Product Management
           </a>
-          , and generally just try to be helpful.
+          , and generally just try to impact people's lives.
         </p>
 
         {/* Newsletter Section */}
