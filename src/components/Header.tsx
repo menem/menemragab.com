@@ -13,6 +13,9 @@ const Header = () => {
           <Link to="/" className="text-foreground hover:underline underline-offset-4 font-medium">
             Home
           </Link>
+          <Link to="/about" className="text-foreground hover:underline underline-offset-4">
+            About
+          </Link>
           <a className="text-foreground hover:underline underline-offset-4" href="https://menemragab.substack.com/">
             Newsletter
           </a>
