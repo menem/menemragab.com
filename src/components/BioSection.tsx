@@ -1,5 +1,5 @@
 import profileImage from "@/assets/profile.png";
-import { Linkedin, Twitter } from "lucide-react";
+import { Linkedin, Twitter, Github } from "lucide-react";
 const BioSection = () => {
   return <section className="py-16 md:py-24">
       <div className="container max-w-4xl mx-auto px-6 text-center">
@@ -44,11 +44,14 @@ const BioSection = () => {
 
         {/* Footer Social Icons */}
         <div className="flex items-center justify-center gap-4 pt-8 border-t border-border">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:opacity-70 transition-opacity">
+          <a href="https://www.linkedin.com/in/menem/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:opacity-70 transition-opacity">
             <Linkedin size={20} />
           </a>
           <a href="https://x.com/menemragab" target="_blank" rel="noopener noreferrer" className="text-foreground hover:opacity-70 transition-opacity">
             <Twitter size={20} />
+          </a>
+          <a href="https://github.com/menem/" target="_blank" rel="noopener noreferrer" className="text-foreground hover:opacity-70 transition-opacity">
+            <Github size={20} />
           </a>
         </div>
       </div>
