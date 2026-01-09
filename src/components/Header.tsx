@@ -26,7 +26,7 @@ const Header = () => {
           <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:opacity-70 transition-opacity">
             <Linkedin size={20} />
           </a>
-          <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:opacity-70 transition-opacity">
+          <a href="https://x.com/menemragab" target="_blank" rel="noopener noreferrer" className="text-foreground hover:opacity-70 transition-opacity">
             <Twitter size={20} />
           </a>
           <a className="ml-2 bg-foreground text-background px-4 py-2 text-sm font-medium hover:opacity-90 transition-opacity" href="mailto:menem@menemragab.com">
