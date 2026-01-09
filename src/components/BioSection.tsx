@@ -34,7 +34,7 @@ const BioSection = () => {
               Let's connect
             </h2>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Product manager crafting digital products that bring joy and empower users. Based in Dubai.
+              ​I love products that are well crafted to provide value and impact user lives with amazing performance. Learn more about my approach👇                                                                                                      
             </p>
             <a className="inline-block bg-foreground text-background px-6 py-3 font-medium hover:opacity-90 transition-opacity rounded-md" href="https://hire.menemragab.com">
               ​Let's work together  

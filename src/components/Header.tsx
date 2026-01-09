@@ -13,10 +13,10 @@ const Header = () => {
           <Link to="/" className="text-foreground hover:underline underline-offset-4 font-medium">
             Home
           </Link>
-          <a href="#" className="text-foreground hover:underline underline-offset-4">
+          <a className="text-foreground hover:underline underline-offset-4" href="https://menemragab.substack.com/">
             Newsletter
           </a>
-          <a href="#" className="text-foreground hover:underline underline-offset-4">
+          <a className="text-foreground hover:underline underline-offset-4" href="https://docsend.com/view/ixspg9n">
             Projects
           </a>
         </nav>
