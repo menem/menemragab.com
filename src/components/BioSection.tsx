@@ -1,15 +1,16 @@
 import profileImage from "@/assets/profile.png";
 import { Linkedin, Twitter } from "lucide-react";
 const BioSection = () => {
-  return <section className="py-16 md:py-24">
-      <div className="container max-w-4xl mx-auto px-6 text-center">
+  return (
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32">
+      <div className="w-full mx-auto px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-24 text-center">
         {/* Main Heading */}
-        <h1 className="font-serif text-5xl md:text-6xl lg:text-7xl font-normal mb-8">
+        <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-7xl font-normal mb-6 sm:mb-8 leading-tight">
           Hi, I'm Menem 👋
         </h1>
 
         {/* One-liner Bio */}
-        <p className="text-lg md:text-xl leading-relaxed max-w-2xl mx-auto mb-20">
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed max-w-3xl mx-auto mb-12 sm:mb-16 md:mb-20 lg:mb-24 px-4 sm:px-0">
           I'm a product manager who builds{" "}
           <a href="#" className="underline underline-offset-4 hover:opacity-70 transition-opacity">
             digital products
@@ -22,36 +23,56 @@ const BioSection = () => {
         </p>
 
         {/* Newsletter Section */}
-        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12 mb-16">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20 mb-12 sm:mb-16 md:mb-20 px-4 sm:px-0">
           {/* Profile Image */}
-          <div className="flex-shrink-0">
-            <img alt="Menem Ragab" className="w-48 h-48 md:w-56 md:h-56 object-cover object-top rounded-sm" src="/lovable-uploads/4045a984-5152-437c-9b79-83c9d367bdf6.jpg" />
+          <div className="flex-shrink-0 w-44 h-44 sm:w-52 sm:h-52 md:w-64 md:h-64 lg:w-72 lg:h-72">
+            <img
+              alt="Menem Ragab"
+              className="w-full h-full object-cover object-top rounded-sm"
+              src="/lovable-uploads/4045a984-5152-437c-9b79-83c9d367bdf6.jpg"
+            />
           </div>
 
           {/* Newsletter CTA */}
-          <div className="text-left max-w-sm">
-            <h2 className="font-serif text-2xl md:text-3xl mb-4">
+          <div className="text-center sm:text-left max-w-md sm:max-w-lg md:max-w-xl">
+            <h2 className="font-serif text-xl sm:text-2xl md:text-3xl mb-3 sm:mb-4">
               Let's connect
             </h2>
-            <p className="text-muted-foreground mb-6 leading-relaxed">
-              ​I love products that are well crafted to provide value and impact user lives with amazing performance. Learn more about my approach👇                                                                                                      
+            <p className="text-muted-foreground mb-5 sm:mb-6 leading-relaxed text-sm sm:text-base">
+              I love products that are well crafted to provide value and impact user lives with amazing performance. Learn more about my approach👇
             </p>
-            <a className="inline-block bg-foreground text-background px-6 py-3 font-medium hover:opacity-90 transition-opacity rounded-md" href="https://hire.menemragab.com">
-              ​Let's work together  
+            <a
+              className="inline-block bg-foreground text-background px-5 sm:px-6 py-2.5 sm:py-3 font-medium hover:opacity-90 transition-opacity rounded-md text-sm sm:text-base"
+              href="https://hire.menemragab.com"
+            >
+              Let's work together
             </a>
           </div>
         </div>
 
         {/* Footer Social Icons */}
-        <div className="flex items-center justify-center gap-4 pt-8 border-t border-border">
-          <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="text-foreground hover:opacity-70 transition-opacity">
+        <div className="flex items-center justify-center gap-4 sm:gap-6 pt-6 sm:pt-8 border-t border-border px-4">
+          <a
+            href="https://linkedin.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground hover:opacity-70 transition-opacity p-1.5"
+            aria-label="LinkedIn"
+          >
             <Linkedin size={20} />
           </a>
-          <a href="https://x.com/menemragab" target="_blank" rel="noopener noreferrer" className="text-foreground hover:opacity-70 transition-opacity">
+          <a
+            href="https://x.com/menemragab"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-foreground hover:opacity-70 transition-opacity p-1.5"
+            aria-label="Twitter"
+          >
             <Twitter size={20} />
           </a>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
 export default BioSection;
