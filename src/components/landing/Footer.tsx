@@ -1,9 +1,9 @@
 import { Heart } from "lucide-react";
 
 const footerLinks = [
-  { label: "App Store", href: "https://apps.apple.com/app/zekr" },
-  { label: "Support", href: "https://zekrapp.com/support" },
-  { label: "Privacy", href: "https://zekrapp.com/privacy" },
+  { label: "App Store", href: "https://apps.apple.com/app/zekr", external: true },
+  { label: "Support", href: "/alzekr/support", external: false },
+  { label: "Privacy", href: "/alzekr/privacy", external: false },
 ];
 
 export const ZekrFooter = () => {
@@ -21,8 +21,8 @@ export const ZekrFooter = () => {
               <a
                 key={link.label}
                 href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
+                target={link.external ? "_blank" : undefined}
+                rel={link.external ? "noopener noreferrer" : undefined}
                 className="text-background/50 hover:text-background transition-colors text-sm"
               >
                 {link.label}
