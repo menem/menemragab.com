@@ -35,6 +35,12 @@
     --input: 0 0% 90%;
     --ring: 0 0% 10%;
 
+    /* Zekr landing brand tokens */
+    --gold: 38 70% 53%;
+    --gold-dark: 32 62% 45%;
+    --gold-light: 38 70% 90%;
+    --heart: 352 60% 50%;
+
     --radius: 0.5rem;
 
     /* Typography */
@@ -111,6 +117,10 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-serif);
   }
+
+  .font-amiri {
+    font-family: "Amiri", serif;
+  }
 }
 
 @layer utilities {
@@ -124,6 +134,15 @@
 
   .link-underline {
     @apply underline underline-offset-4 decoration-foreground/30 hover:decoration-foreground transition-all duration-200;
+  }
+
+  /* Zekr landing specific utilities */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 
   .animate-fade-in {
