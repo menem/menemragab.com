@@ -11,6 +11,7 @@ const Header = () => {
   const navLinks = [
     { to: "/", label: "Home" },
     { to: "/about", label: "About" },
+    { to: "/alzekr", label: "Al Zekr" },
     { href: "https://menemragab.substack.com/", label: "Newsletter", external: true },
     { href: "https://docsend.com/view/ixspg9n", label: "Projects", external: true },
   ];
