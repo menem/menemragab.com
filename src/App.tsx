@@ -7,6 +7,8 @@ import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import About from "./pages/About";
 import AlZekr from "./pages/AlZekr";
+import AlZekrSupport from "./pages/AlZekrSupport";
+import AlZekrPrivacy from "./pages/AlZekrPrivacy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -22,6 +24,8 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
             <Route path="/alzekr" element={<AlZekr />} />
+            <Route path="/alzekr/support" element={<AlZekrSupport />} />
+            <Route path="/alzekr/privacy" element={<AlZekrPrivacy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

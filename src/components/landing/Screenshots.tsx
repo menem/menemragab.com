@@ -91,15 +91,6 @@ export const ZekrScreenshots = () => {
         </motion.div>
       </div>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 0.5 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.5, delay: 0.5 }}
-        className="text-center text-muted-foreground text-xs mt-10 px-6"
-      >
-        Replace with your app screenshots
-      </motion.p>
     </section>
   );
 };
