@@ -25,6 +25,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       return res.status(200).json({ success: true, message: "Email logged (API key not configured)" });
     }
 
+    // Use a verified sender email or your domain email
+    // For Resend, you can use onboarding@resend.dev for testing, or verify your domain
+    const fromEmail = process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
+    
     const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
@@ -32,7 +36,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
         "Authorization": `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "waitlist@menemragab.com",
+        from: fromEmail,
         to: "me@menemragab.com",
         subject: "[4FL - New Waiting List Signup]",
         text: emailBody,
