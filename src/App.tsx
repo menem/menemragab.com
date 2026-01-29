@@ -6,9 +6,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import Index from "./pages/Index";
 import About from "./pages/About";
+import Projects from "./pages/Projects";
 import AlZekr from "./pages/AlZekr";
 import AlZekrSupport from "./pages/AlZekrSupport";
 import AlZekrPrivacy from "./pages/AlZekrPrivacy";
+import StoicCalendar from "./pages/StoicCalendar";
+import StoicCalendarSupport from "./pages/StoicCalendarSupport";
+import StoicCalendarPrivacy from "./pages/StoicCalendarPrivacy";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,9 +27,13 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/about" element={<About />} />
+            <Route path="/projects" element={<Projects />} />
             <Route path="/alzekr" element={<AlZekr />} />
             <Route path="/alzekr/support" element={<AlZekrSupport />} />
             <Route path="/alzekr/privacy" element={<AlZekrPrivacy />} />
+            <Route path="/stoic-calendar" element={<StoicCalendar />} />
+            <Route path="/stoic-calendar/support" element={<StoicCalendarSupport />} />
+            <Route path="/stoic-calendar/privacy" element={<StoicCalendarPrivacy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

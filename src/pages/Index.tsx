@@ -1,6 +1,8 @@
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import BioSection from "@/components/BioSection";
+import AppsSection from "@/components/AppsSection";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -20,7 +22,9 @@ const Index = () => {
         <Header />
         <main className="flex-1">
           <BioSection />
+          <AppsSection />
         </main>
+        <Footer />
       </div>
     </>
   );
