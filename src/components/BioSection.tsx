@@ -1,4 +1,6 @@
 import profileImage from "@/assets/profile.png";
+import { Link } from "react-router-dom";
+
 const BioSection = () => {
   return (
     <section className="py-12 sm:py-16 md:py-20 lg:py-24 xl:py-32">
@@ -11,11 +13,11 @@ const BioSection = () => {
         {/* One-liner Bio */}
         <p className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed max-w-3xl mx-auto mb-12 sm:mb-16 md:mb-20 lg:mb-24 px-4 sm:px-0">
           I'm a product manager who builds{" "}
-          <a href="#" className="underline underline-offset-4 hover:opacity-70 transition-opacity">
+          <Link to="/projects" className="underline underline-offset-4 hover:opacity-70 transition-opacity">
             digital products
-          </a>
+          </Link>
           ,{" "}
-          <a href="#" className="underline underline-offset-4 hover:opacity-70 transition-opacity">
+          <a href="https://menemragab.substack.com" target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:opacity-70 transition-opacity">
             write about Product Management
           </a>
           , and generally just try to impact people's lives.
@@ -23,13 +25,47 @@ const BioSection = () => {
 
         {/* Newsletter Section */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-10 md:gap-12 lg:gap-16 xl:gap-20 mb-12 sm:mb-16 md:mb-20 px-4 sm:px-0">
-          {/* Profile Image */}
-          <div className="flex-shrink-0 w-44 h-44 sm:w-52 sm:h-52 md:w-64 md:h-64 lg:w-72 lg:h-72">
-            <img
-              alt="Menem Ragab"
-              className="w-full h-full object-cover object-top rounded-sm"
-              src="/lovable-uploads/4045a984-5152-437c-9b79-83c9d367bdf6.jpg"
-            />
+          {/* Profile Image - Instant Photo Style */}
+          <div className="flex-shrink-0 flex flex-col items-center">
+            <div 
+              className="bg-white shadow-2xl rotate-[-1.5deg] hover:rotate-0 transition-all duration-300 hover:shadow-2xl relative rounded-sm"
+              style={{
+                paddingTop: '0.75rem',
+                paddingLeft: '0.75rem',
+                paddingRight: '0.75rem',
+                paddingBottom: '2.5rem',
+                boxShadow: '0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1)',
+                backgroundImage: `url("data:image/svg+xml,%3Csvg width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E"), radial-gradient(circle at 50% 50%, rgba(0,0,0,0.01) 0%, transparent 70%)`,
+                backgroundBlendMode: 'multiply',
+              }}
+            >
+              <div 
+                className="bg-white" 
+                style={{ 
+                  boxShadow: 'inset 0 2px 4px rgba(0, 0, 0, 0.08), inset 0 1px 2px rgba(0, 0, 0, 0.1)',
+                }}
+              >
+                <img
+                  alt="Menem Ragab"
+                  className="w-44 h-44 sm:w-52 sm:h-52 md:w-64 md:h-64 lg:w-72 lg:h-72 object-cover object-top"
+                  src="/lovable-uploads/4045a984-5152-437c-9b79-83c9d367bdf6.jpg"
+                />
+              </div>
+              {/* Date written on photo border with mature handwriting style */}
+              <p 
+                className="absolute bottom-3 sm:bottom-4 md:bottom-5 left-1/2 text-[11px] sm:text-xs md:text-sm text-black"
+                style={{ 
+                  fontFamily: "'Caveat', cursive",
+                  fontWeight: 500,
+                  letterSpacing: '0.02em',
+                  transform: 'translateX(-50%) translateY(3px) rotate(-0.3deg)',
+                  textShadow: '0.5px 0.5px 1px rgba(0,0,0,0.15)',
+                  color: 'rgba(0, 0, 0, 0.85)',
+                }}
+              >
+                2021-21-04
+              </p>
+            </div>
           </div>
 
           {/* Newsletter CTA */}

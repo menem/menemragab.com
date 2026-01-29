@@ -40,7 +40,7 @@ const Hero = () => {
             </p>
             
             <div 
-              className={`flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start opacity-0 ${isVisible ? 'animate-fade-in-up animation-delay-300' : ''}`}
+              className={`flex flex-col items-center lg:items-start gap-4 justify-center lg:justify-start opacity-0 ${isVisible ? 'animate-fade-in-up animation-delay-300' : ''}`}
             >
               <Button variant="stoic" size="xl" asChild>
                 <a 
@@ -56,13 +56,22 @@ const Hero = () => {
                 </a>
               </Button>
               
-              <a 
-                href="#how-it-works"
-                className="text-muted-foreground hover:text-foreground transition-colors text-sm"
-              >
-                Learn more ↓
-              </a>
+              <div className="mt-4">
+                <a 
+                  href="https://www.producthunt.com/products/stoic-calendar-your-life-in-weeks?embed=true&utm_source=badge-featured&utm_medium=badge&utm_campaign=badge-stoic-calendar-your-life-in-weeks" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  <img 
+                    alt="Stoic calendar- Your life in weeks - Track your life and major goals from your wallpaper  | Product Hunt" 
+                    width="250" 
+                    height="54" 
+                    src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=1068253&theme=light&t=1769678521993"
+                  />
+                </a>
+              </div>
             </div>
+            
           </div>
           
           {/* Phone mockup */}
@@ -76,6 +85,18 @@ const Hero = () => {
             {/* Ambient glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-gold/5 rounded-full blur-3xl -z-10" />
           </div>
+        </div>
+        
+        {/* Learn more at bottom of fold */}
+        <div 
+          className={`absolute bottom-8 left-1/2 -translate-x-1/2 flex justify-center opacity-0 ${isVisible ? 'animate-fade-in-up animation-delay-500' : ''}`}
+        >
+          <a 
+            href="#how-it-works"
+            className="text-muted-foreground hover:text-foreground transition-colors text-sm inline-flex items-center gap-1 animate-bounce-down"
+          >
+            Learn more <span className="inline-block">↓</span>
+          </a>
         </div>
       </div>
     </section>
