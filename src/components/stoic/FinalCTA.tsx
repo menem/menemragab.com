@@ -46,7 +46,7 @@ const FinalCTA = () => {
           
           <Button variant="stoic" size="xl" asChild>
             <a 
-              href="https://apps.apple.com/app/stoic-calendar" 
+              href="https://apps.apple.com/us/app/stoic-calendar/id6758130312" 
               target="_blank" 
               rel="noopener noreferrer"
               className="gap-3"
