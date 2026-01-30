@@ -16,7 +16,7 @@ const apps = [
     description: "Your Muslim Companion",
     icon: "/Zekr-AppIcon.png",
     link: "/alzekr",
-    appStoreUrl: "https://apps.apple.com/app/zekr",
+    appStoreUrl: "https://apps.apple.com/app/al-zekr-your-muslim-companion/id6757874634",
     comingSoon: false,
   },
   {
@@ -54,7 +54,10 @@ const AppsSection = () => {
         body: JSON.stringify({ email }),
       });
 
+      const data = await response.json();
+
       if (response.ok) {
+        console.log("Waitlist submission successful:", data);
         setSubmitted(true);
         setTimeout(() => {
           setWaitlistOpen(false);
@@ -62,17 +65,12 @@ const AppsSection = () => {
           setSubmitted(false);
         }, 2000);
       } else {
-        throw new Error("Failed to submit");
+        console.error("Waitlist submission failed:", data);
+        alert(`Failed to join waitlist: ${data.error || "Unknown error"}. Please try again or contact support.`);
       }
     } catch (error) {
       console.error("Error submitting waitlist:", error);
-      // Still show success to user even if email fails
-      setSubmitted(true);
-      setTimeout(() => {
-        setWaitlistOpen(false);
-        setEmail("");
-        setSubmitted(false);
-      }, 2000);
+      alert("Network error. Please check your connection and try again.");
     }
   };
 

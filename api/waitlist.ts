@@ -1,6 +1,15 @@
 import type { VercelRequest, VercelResponse } from "@vercel/node";
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  // Enable CORS
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader("Access-Control-Allow-Methods", "POST, OPTIONS");
+  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+
+  if (req.method === "OPTIONS") {
+    return res.status(200).end();
+  }
+
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
@@ -14,21 +23,27 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     const emailBody = `New waitlist signup for 4FL app:\n\nEmail: ${email}\n\nTimestamp: ${new Date().toISOString()}`;
     
-    // Using Resend to send email
-    // Make sure to set RESEND_API_KEY in your Vercel environment variables
     const RESEND_API_KEY = process.env.RESEND_API_KEY;
     
     if (!RESEND_API_KEY) {
-      // Fallback: log the email (for development)
-      console.log("Waitlist signup (no API key):", email);
-      console.log("Would send email to me@menemragab.com with subject: [4FL - New Waiting List Signup]");
-      return res.status(200).json({ success: true, message: "Email logged (API key not configured)" });
+      console.error("RESEND_API_KEY is not set");
+      return res.status(500).json({ 
+        error: "Email service not configured",
+        details: "RESEND_API_KEY environment variable is missing"
+      });
     }
 
     // Use a verified sender email or your domain email
     // For Resend, you can use onboarding@resend.dev for testing, or verify your domain
     const fromEmail = process.env.RESEND_FROM_EMAIL || "onboarding@resend.dev";
     
+    console.log("Attempting to send email:", {
+      from: fromEmail,
+      to: "me@menemragab.com",
+      subject: "[4FL - New Waiting List Signup]",
+      hasApiKey: !!RESEND_API_KEY
+    });
+
     const response = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: {
@@ -43,14 +58,27 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       }),
     });
 
+    const responseData = await response.json();
+
     if (!response.ok) {
-      const error = await response.text();
-      throw new Error(`Resend API error: ${error}`);
+      console.error("Resend API error:", response.status, responseData);
+      return res.status(response.status).json({ 
+        error: "Failed to send email",
+        details: responseData
+      });
     }
 
-    return res.status(200).json({ success: true, message: "Email sent successfully" });
-  } catch (error) {
+    console.log("Email sent successfully:", responseData);
+    return res.status(200).json({ 
+      success: true, 
+      message: "Email sent successfully",
+      data: responseData
+    });
+  } catch (error: any) {
     console.error("Error sending email:", error);
-    return res.status(500).json({ error: "Failed to send email" });
+    return res.status(500).json({ 
+      error: "Failed to send email",
+      details: error.message || String(error)
+    });
   }
 }

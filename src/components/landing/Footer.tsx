@@ -1,7 +1,7 @@
 import { Heart } from "lucide-react";
 
 const footerLinks = [
-  { label: "App Store", href: "https://apps.apple.com/app/zekr", external: true },
+  { label: "App Store", href: "https://apps.apple.com/app/al-zekr-your-muslim-companion/id6757874634", external: true },
   { label: "Support", href: "/alzekr/support", external: false },
   { label: "Privacy", href: "/alzekr/privacy", external: false },
 ];
