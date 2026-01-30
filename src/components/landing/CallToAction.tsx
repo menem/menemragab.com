@@ -16,7 +16,7 @@ export const ZekrCallToAction = () => {
         <p className="text-muted-foreground text-lg sm:text-xl font-light mb-12">Your spiritual companion awaits.</p>
 
         <motion.a
-          href="https://apps.apple.com/app/zekr"
+          href="https://apps.apple.com/app/al-zekr-your-muslim-companion/id6757874634"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block"

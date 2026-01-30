@@ -37,7 +37,7 @@ export const ZekrHeader = () => {
             </a>
           ))}
           <a
-            href="https://apps.apple.com/app/zekr"
+            href="https://apps.apple.com/app/al-zekr-your-muslim-companion/id6757874634"
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-1.5 bg-foreground text-background rounded-full text-sm font-medium hover:bg-foreground/90 transition-colors"
@@ -72,7 +72,7 @@ export const ZekrHeader = () => {
               </a>
             ))}
             <a
-              href="https://apps.apple.com/app/zekr"
+              href="https://apps.apple.com/app/al-zekr-your-muslim-companion/id6757874634"
               target="_blank"
               rel="noopener noreferrer"
               className="px-6 py-2.5 bg-foreground text-background rounded-full text-base font-medium"

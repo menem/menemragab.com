@@ -51,7 +51,7 @@ export const ZekrHero = () => {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.75, ease: [0.16, 1, 0.3, 1] }}
-          href="https://apps.apple.com/app/zekr"
+          href="https://apps.apple.com/app/al-zekr-your-muslim-companion/id6757874634"
           target="_blank"
           rel="noopener noreferrer"
           className="inline-block transition-transform duration-300 hover:scale-105"
